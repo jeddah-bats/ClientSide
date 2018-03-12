@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Header from './components/Header';
+import Slider from './components/Slider';
 import Grid from './components/Grid';
 import SearchCity from './components/SearchCity';
 import HotProducts from './components/HotProducts';
 import Categories from './components/Categories';
 import Footer from './components/Footer';
+import Search from './components/Search';
+
 
 class App extends Component {
   render() {
     return (
       <div>
         <div>
-          <Header/>
+          <Slider/>
+          <Search/>
         </div>
         <div>
           <SearchCity/>
