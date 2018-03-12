@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Footer extends Component {
     render() {
         return (
-            <h1>footer</h1>
+            <p>جميع الحقوق محفوظة 2018</p>
         );
     }
 

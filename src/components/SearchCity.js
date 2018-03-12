@@ -6,12 +6,12 @@ class SearchCity extends Component {
         return (
             <div>
                 <h1>ابحث في</h1>
-                <p>جدة</p>
-                <p>مكة</p>
-                <p>المدينة المنورة</p>
-                <p>الرياض</p>
-                <p>الخبر</p>
-                <p>مدن اخرى</p>
+                <a href="#"> جدة</a>
+                <a href="#"> مكة</a>
+                <a href="#"> المدينة المنورة</a>
+                <a href="#"> الرياض</a>
+                <a href="#"> الخبر</a>
+                <a href="#"> مدن اخرى</a>
             </div>
         );
     }

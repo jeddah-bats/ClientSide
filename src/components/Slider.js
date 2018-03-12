@@ -7,19 +7,19 @@ class Slider extends Component {
   render() {
     return (
       <div id="infoi">
-      <Carousel>
+      <Carousel controls={false}>
         <Carousel.Item>
-          <img width={900} height={200} src="assets/11.jpg" />
+          <img src="assets/1.jpg" />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>مقارنة سريعة للمنتجات بين عدة مواقع</h3>
+            <p>قريباً</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img width={900} height={200} alt="900x500" src="assets/22.jpg" />
+          <img width={900} height={200} alt="900x500" src="assets/2.jpg" />
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>قم بتحقيق دخل أفضل للشركة</h3>
+            <p>قريباً</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

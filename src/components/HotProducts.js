@@ -8,35 +8,36 @@ class HotProducts extends Component {
                 <h1>المنتجات الأكثر رواجاً</h1>
                 <Row className="show-grid">
                     <Col xs={6} md={4}>
-                    <img width={60} height={60} alt="900x500" src="assets/4.gif" />
-                    <h2>عسكريم</h2>
-                    <p>حيكون هنا في شويا كلام حلو</p>
+                    <img alt="900x500" src="assets/block.png" />
+                    <h2>قريباً</h2>
+                    <p>قريباً</p>
                     </Col>
                     <Col xs={6} md={4}>
-                    <img width={60} height={60} alt="900x500" src="assets/5.jpg" />
-                    <h2>عطر</h2>
-                    <p>حيكون هنا في شويا كلام حلو</p>
+                    <img alt="900x500" src="assets/block.png" />
+                    <h2>قريباً</h2>
+                    <p>قريباً</p>
                     </Col>
                     <Col xs={6} md={4}>
-                    <img width={60} height={60} alt="900x500" src="assets/6.png" />
-                    <h2>هواوي</h2>
-                    <p>حيكون هنا في شويا كلام حلو</p>
+                    <img alt="900x500" src="assets/block.png" />
+                    <h2>قريباً</h2>
+                    <p>قريباً</p>
                     </Col>
-                </Row>  <Row className="show-grid">
+                </Row>  
+                <Row className="show-grid">
                     <Col xs={6} md={4}>
-                    <img width={60} height={60} alt="900x500" src="assets/4.gif" />
-                    <h2>عسكريم</h2>
-                    <p>حيكون هنا في شويا كلام حلو</p>
-                    </Col>
-                    <Col xs={6} md={4}>
-                    <img width={60} height={60} alt="900x500" src="assets/5.jpg" />
-                    <h2>عطر</h2>
-                    <p>حيكون هنا في شويا كلام حلو</p>
+                    <img alt="900x500" src="assets/block.png" />
+                    <h2>قريباً</h2>
+                    <p>قريباً</p>
                     </Col>
                     <Col xs={6} md={4}>
-                    <img width={60} height={60} alt="900x500" src="assets/6.png" />
-                    <h2>هواوي</h2>
-                    <p>حيكون هنا في شويا كلام حلو</p>
+                    <img alt="900x500" src="assets/block.png" />
+                    <h2>قريباً</h2>
+                    <p>قريباً</p>
+                    </Col>
+                    <Col xs={6} md={4}>
+                    <img alt="900x500" src="assets/block.png" />
+                    <h2>قريباً</h2>
+                    <p>قريباً</p>
                     </Col>
                 </Row>
             </Grid>
