@@ -1,0 +1,16 @@
+.cust #cust1 .cust2 img{
+    border: solid;
+    height: 17%;
+    width: 17%;
+}
+
+.cust2{
+    height: 17%;
+    width: 17%;
+    text-align: center;
+}
+
+#firstf{
+    margin-left: 25%;
+
+}

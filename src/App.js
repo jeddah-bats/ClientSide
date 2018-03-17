@@ -18,13 +18,13 @@ class App extends Component {
           <Slider/>
           <Search/>
         </div>
-        <div>
+        <div id="center">
           <SearchCity/>
         </div>
-        <div>
+        <div id="fea">
           <Features/>
         </div>
-        <div>
+        <div id="hot">
           <HotProducts/>
         </div>
         <div>

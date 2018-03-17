@@ -1,0 +1,25 @@
+.cust #cust1 .cust2 img{
+    border: solid;
+    height: 17%;
+    width: 17%;
+}
+
+.cust #cust5 .cust2 img{
+    border: solid;
+    height: 17%;
+    width: 17%;
+}
+
+.cust2{
+    height: 17%;
+    width: 17%;
+    text-align: center;
+}
+
+#firsth,#firsth1{
+    margin-left: 25%;
+
+}
+h2{
+    text-align: center;
+}

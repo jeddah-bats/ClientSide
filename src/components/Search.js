@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { FormGroup,FormControl,MenuItem, InputGroup, DropdownButton } from 'react-bootstrap';
-import './Search.css';
+import { Button,FormGroup,FormControl,MenuItem, InputGroup, DropdownButton } from 'react-bootstrap';
+import './css/Search.css';
 
 
 class Search extends Component {
@@ -10,14 +10,12 @@ class Search extends Component {
             <form>
                 <FormGroup>
                     <InputGroup>
+                    <InputGroup.Button>
                         <FormControl type="text" />
-                        <DropdownButton
-                            componentClass={InputGroup.Button}
-                            id="input-dropdown-addon"
-                            title="Action"
-                        >
-                            <MenuItem key="1">Item</MenuItem>
-                        </DropdownButton>
+                        <Button>
+                        Default
+                        </Button>
+                    </InputGroup.Button>
                     </InputGroup>
                 </FormGroup>
             </form>
