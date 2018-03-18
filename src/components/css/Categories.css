@@ -1,11 +1,9 @@
 .cust #cust1 .cust2 img{
-    border: solid;
     height: 17%;
     width: 17%;
 }
 
 .cust #cust5 .cust2 img{
-    border: solid;
     height: 17%;
     width: 17%;
 }
@@ -19,5 +17,10 @@
 
 #firstc,#firstc1{
     margin-left: 25%;
+}
+#panelc{
+    width: 90%;
+    margin-left: 5%;
+    background-color: #f5f5f5;
 }
 

@@ -1,5 +1,4 @@
 .cust #cust1 .cust2 img{
-    border: solid;
     height: 17%;
     width: 17%;
 }
@@ -13,4 +12,10 @@
 #firstf{
     margin-left: 25%;
 
+}
+
+#panelf{
+    width: 90%;
+   margin-left: 5%;
+   background-color: #f5f5f5;
 }

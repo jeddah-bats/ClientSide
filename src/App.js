@@ -21,6 +21,7 @@ class App extends Component {
         <div id="center">
           <SearchCity/>
         </div>
+        
         <div id="fea">
           <Features/>
         </div>

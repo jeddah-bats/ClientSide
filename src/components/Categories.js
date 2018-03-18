@@ -1,32 +1,34 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, Panel } from 'react-bootstrap';
+import { Grid, Row, Col, Panel,Thumbnail } from 'react-bootstrap';
 import './css/Categories.css';
 
 class Categories extends Component {
     render() {
         return (
 
-            <Panel>
+            <Panel bsStyle="primary" id="panelc">
                 <Panel.Heading>
                     <Panel.Title componentClass="h2" bsClass="panel" ><h2>التصنيفات</h2></Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>
 
                     <Grid bsClass="cust">
-                        <h1>التصنيفات</h1>
                         <div id="row1">
                         <Row className="show-grid" id="cust1">
                             <Col xs={6} md={4} className="cust2" id="firstc">
-                                <img alt="العاب الفيديو" src="assets/game.png" />
+                            <Thumbnail alt="العاب الفيديو" src="assets/game.png">
                                 <h2>العاب فيديو</h2>
+                                </Thumbnail>
                             </Col>
                             <Col xs={6} md={4} className="cust2">
-                                <img alt="اجهزة" src="assets/television.png" />
+                            <Thumbnail alt="اجهزة" src="assets/television.png" >
                                 <h2>اجهزة</h2>
+                                </Thumbnail>
                             </Col>
                             <Col xs={6} md={4} className="cust2">
-                                <img alt="حراج" src="assets/car.png" />
+                            <Thumbnail alt="حراج" src="assets/car.png" >
                                 <h2>حراج</h2>
+                                </Thumbnail>
                             </Col>
                         </Row>
                         </div>
@@ -35,12 +37,14 @@ class Categories extends Component {
 
                             </Col>
                             <Col xs={6} md={4} className="cust2">
-                                <img alt="ازياء" src="assets/polo-shirt.png" />
+                            <Thumbnail alt="ازياء" src="assets/polo-shirt.png" >
                                 <h2>ازياء</h2>
+                                </Thumbnail>
                             </Col>
                             <Col xs={6} md={4} className="cust2">
-                                <img alt="اثاث" src="assets/bed.png" />
+                            <Thumbnail alt="اثاث" src="assets/bed.png" >
                                 <h2>اثاث</h2>
+                                </Thumbnail>
                             </Col>
                         </Row>
                     </Grid>

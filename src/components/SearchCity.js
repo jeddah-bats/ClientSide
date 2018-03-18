@@ -10,7 +10,6 @@ class SearchCity extends Component {
           }
         return (
             <div id="center1">
-                <h1>ابحث في</h1>
                 <Nav bsStyle="pills"  onSelect={handleSelect} bsClass="nav" >
                    <NavItem eventKey={1} href="/home" >
                         جدة

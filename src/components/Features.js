@@ -7,9 +7,9 @@ class Features extends Component {
         return (
 
 
-            <Panel>
-                <Panel.Heading>
-                    <Panel.Title componentClass="h2" bsClass="panel" ><h2>ابحث في</h2></Panel.Title>
+            <Panel id="panelf" bsStyle="primary">
+                <Panel.Heading id="panel">
+                    <Panel.Title componentClass="h2"  ><h2>ابحث في</h2></Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>
 
