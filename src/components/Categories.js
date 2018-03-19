@@ -33,7 +33,7 @@ class Categories extends Component {
                         </Row>
                         </div>
                         <Row className="show-grid" id="cust5" >
-                            <Col xs={6} md={4} id="firstc1">
+                            <Col xs={6} md={4} id="firstc1" className="cust2">
 
                             </Col>
                             <Col xs={6} md={4} className="cust2">

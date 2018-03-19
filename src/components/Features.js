@@ -9,7 +9,7 @@ class Features extends Component {
 
             <Panel id="panelf" bsStyle="primary">
                 <Panel.Heading id="panel">
-                    <Panel.Title componentClass="h2"  ><h2>ابحث في</h2></Panel.Title>
+                    <Panel.Title componentClass="h2"  ><h2>المميزات</h2></Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>
 

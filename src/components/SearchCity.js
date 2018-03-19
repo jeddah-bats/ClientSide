@@ -9,7 +9,9 @@ class SearchCity extends Component {
             alert(`selected ${selectedKey}`);
           }
         return (
+            <div>
             <div id="center1">
+            <h1>ابحث في</h1>
                 <Nav bsStyle="pills"  onSelect={handleSelect} bsClass="nav" >
                    <NavItem eventKey={1} href="/home" >
                         جدة
@@ -21,6 +23,9 @@ class SearchCity extends Component {
                         الرياض
                         </NavItem>
                 </Nav>
+            </div>
+            <div id="line">
+            </div>
             </div>
         );
     }
