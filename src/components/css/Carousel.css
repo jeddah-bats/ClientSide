@@ -1,0 +1,15 @@
+*{
+    direction: rtl;
+}
+
+img{
+    min-width: 100%;
+    max-height: 500px;
+}
+  
+@media (max-width: 768px) {
+    img {
+        max-width:inherit;
+        
+    }
+}

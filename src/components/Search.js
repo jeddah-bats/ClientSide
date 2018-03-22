@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
-import { Button, FormGroup, FormControl, MenuItem, InputGroup, DropdownButton } from 'react-bootstrap';
+import { Button, FormGroup, FormControl, MenuItem, InputGroup, DropdownButton, ControlLabel, Form, ButtonToolbar } from 'react-bootstrap';
 import './css/Search.css';
 
 
+
 class Search extends Component {
+    
     render() {
         return (
             <div id="search">
-                <form>
-                    <FormGroup>
-                        <InputGroup>
-                            <InputGroup.Button>
-                                <Button>ابحث</Button>
-                            </InputGroup.Button>
-                            <FormControl type="text" />
-                        </InputGroup>
-                    </FormGroup>
-                </form>
+                <div class="box">
+                    <input type="search" class="in1" />
+                    <select class="sel">
+                        <option value="jed" selected>جدة</option>
+                        <option value="mkh">مكة</option>
+                        <option value="ray">الرياض</option>
+                    </select>
+
+                    <button class="butt" type="button" ><img alt="search" src="assets/magnifier.png" /></button>
+                </div>
             </div>
         );
     }

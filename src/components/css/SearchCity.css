@@ -1,38 +1,11 @@
-.nav ul {
-    list-style: none;
-    background-color: #444;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    
-    
-  }
-  .nav li {
+.nav li {
     font-family: 'Oswald', sans-serif;
     font-size: 1.2em;
     line-height: 40px;
     height: 40px;
     text-align: center;
+    margin-bottom: 25px;
     border-bottom: 1px solid #888;
-
-  }
-   
-  .nav NavItem {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    border-bottom:5px solid grey; 
-    transition: .3s background-color;
-  }
-   
-  .nav NavItem:hover {
-    background-color: #005f5f;
-  }
-   
-  .nav NavItem.active {
-    background-color: #fff;
-    color: #444;
-    cursor: default;
   }
    
   @media screen and (min-width: 600px) {
@@ -50,8 +23,6 @@
       margin-right: -4px;
     }
 
-
-
 .nav{
     float:none;
     margin:0 auto;
@@ -63,14 +34,25 @@
   padding-bottom: 1%;
 
 }
+
 #line{
-  border-bottom: solid 1px gray; 
+border-bottom: solid 1px gray; 
 margin-left: 30%;
 margin-right: 30%;
 
 }
-h1{
+
+h2{
   text-align: center;
+  color: #2e75b6;
 }
 
+.nav.nav-pills li a {
+  color: gray;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  color: #fff;
+  background-color: #337ab7;
+}
 

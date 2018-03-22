@@ -1,29 +1,16 @@
-.cust #cust1 .cust2 img{
-    height: 17%;
-    width: 17%;
+#maindivh{
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
-.cust #cust5 .cust2 img{
-    height: 17%;
-    width: 17%;
-}
-
-.cust2{
-    height: 17%;
-    width: 17%;
+#hotproducts{
     text-align: center;
+    color: #2e75b6;
+    padding-bottom: 13px;
 }
 
-#firsth,#firsth1{
-    margin-left: 25%;
-
-}
-h2{
+.products{
     text-align: center;
-}
-#panelh{
-    
-    width: 90%;
-   margin-left: 5%  ; 
-   background-color: #f5f5f5; 
+    color: gray;
+    padding-bottom: 13px;
 }
