@@ -1,0 +1,49 @@
+
+#griddiv{
+    margin-top: 2%;
+}
+.lg{
+    height: 170px;
+    border-bottom: solid 2px gray;
+    border-top: solid 2px gray;
+    border-left: none;
+}
+.img{
+    border:solid grey 2px;
+    border-radius: 25px;
+    padding: 10px;
+}
+.gridele{
+    margin: 0%;
+    padding: 0%;
+}
+.show-grid{
+    margin: 0%; 
+}
+.col{
+    margin: 0%;
+}
+.griddiv{
+    margin: 0%;
+
+}
+.col-md-8{
+    width:65%;
+}
+.lgcontainer{
+    margin: 0%;
+    padding: 0%;
+
+}
+
+.impic{
+    height: 150px;
+    width: 150px;
+    min-width: 0;
+}
+.page{
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 30%;
+}
+

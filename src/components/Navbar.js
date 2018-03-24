@@ -21,14 +21,6 @@ class NavBar extends Component {
                             <FormControl type="text" placeholder="Search" /></FormGroup>{' '}
                             <Button type="submit">Submit</Button>
                         </Navbar.Form>
-                        <Nav>
-                            <NavItem eventKey={1}>
-                            <Link to='/citypage'> Cities </Link>
-                            </NavItem>
-                            <NavItem eventKey={2}>
-                                <Link to='/Proudct'> Proudct </Link>
-                            </NavItem>
-                        </Nav>
                     </Navbar.Collapse>
                 </Navbar>
             </div>

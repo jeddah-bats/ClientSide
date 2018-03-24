@@ -13,7 +13,33 @@
     padding-bottom: 13px;
 }
 
-.ccss{
-    text-align: center;
-    font-size: 35px;
-}
+.bc,
+  .bc::after {
+    -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+      transition: all 0.3s;
+  }
+  
+  .bc {
+    background: none;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    color: #2e75b6;
+    display: block;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 1em auto;
+    padding: 2em 5em;
+    position: relative;
+  }
+
+  .bc:hover {
+    border: 2px solid #2e75b6;
+  }
+  
+  .iconcat{
+      width: 100px;
+      height: 100px;
+      margin-bottom: 1em;
+  }

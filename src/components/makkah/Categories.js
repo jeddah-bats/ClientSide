@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid,Row,Col,Button,Thumbnail } from 'react-bootstrap';
-import './css/Categories.css';
+import '../css/Categories.css';
 
 var Link = require('react-router-dom').Link
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid,Row,Col,Button,Thumbnail } from 'react-bootstrap';
-import './css/Features.css';
+import '../css/Features.css';
 
 class Features extends Component {
     render() {

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import Features from './components/Features';
-import Hero from './components/Hero';
-import HotProducts from './components/HotProducts';
-import Categories from './components/Categories';
-import SearchCity from './components/SearchCity';
-import Footer from './components/Footer';
+import Hero from './components/riyadh/Hero';
+import HotProducts from './components/riyadh/HotProducts';
+import Categories from './components/riyadh/Categories';
+import SearchCity from './components/riyadh/SearchCity';
+import Footer from './components/riyadh/Footer';
 
 var ReactRouter = require('react-router-dom');
 var Router = ReactRouter.BrowserRouter;
