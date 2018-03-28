@@ -21,8 +21,6 @@ class Proudct extends Component {
         <div> <HotProducts/> </div>
         <div> <Categories/> </div>
         <div> <Footer/> </div>
-        
-
       </div>
       
     );
