@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Grid,Row,Col,Button,Thumbnail } from 'react-bootstrap';
 import '../css/Features.css';
 
+var Link = require('react-router-dom').Link
+
 class Features extends Component {
     render() {
         return (
@@ -14,7 +16,9 @@ class Features extends Component {
                                     <h2 class="fcss" >الـتـاريـخ</h2>
                                     <p>لعرض منتجات في تاريخ معين</p>
                             <p>
+                            <Link to='/riy/date'>
                             <Button bsStyle="primary">أعرض المزيد</Button>
+                            </Link>
                             </p>
                         </Thumbnail>
                         </Col>
@@ -23,7 +27,9 @@ class Features extends Component {
                                     <h2 class="fcss">الـمـديـنـة</h2>
                                     <p>لعرض المنتجات التي تباع في مدينتك</p>
                             <p>
+                            <Link to='/riy/products'>
                             <Button bsStyle="primary">أعرض المزيد</Button>
+                            </Link>
                             </p>
                         </Thumbnail>
                         </Col>
@@ -32,7 +38,9 @@ class Features extends Component {
                                     <h2 class="fcss" >الـمـنـتـج</h2>
                                     <p>قم بالبحث عن منتج محدد</p>
                             <p>
+                            <Link to='/riy/products'>
                             <Button bsStyle="primary">أعرض المزيد</Button>
+                            </Link>
                             </p>
                         </Thumbnail>
                         </Col>

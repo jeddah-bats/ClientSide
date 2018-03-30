@@ -11,21 +11,21 @@ class Categories extends Component {
                 <Grid>
                 <h2 id="cate">الـتـصـنـيـفـات</h2>
                     <Row>
-                    <Link to='/Products_page'>
+                    <Link to='/mak/video-games'>
                     <Col xs={6} md={4}>
                         <button class="bc">
                             <p><img class="iconcat" src="assets/game.png" /></p>
                             الـعـاب الـفـيـديـو
                         </button>
                     </Col></Link>
-                    <Link to='/Products_page'>
+                    <Link to='/mak/electronics'>
                     <Col xs={6} md={4}>
                         <button class="bc">
                             <p><img class="iconcat" src="assets/television.png" /></p>
                             اجـهـزة
                         </button>
                         </Col></Link>
-                        <Link to='/Products_page'>
+                        <Link to='mak/cars'>
                         <Col xs={6} md={4}>
                         <button class="bc">
                             <p><img class="iconcat" src="assets/car.png" /></p>
@@ -35,14 +35,14 @@ class Categories extends Component {
                         <Col xs={6} md={4}>
 
                         </Col>
-                        <Link to='/Products_page'>
+                        <Link to='/mak/fashion'>
                         <Col xs={6} md={4}>
                         <button class="bc" >
                             <p><img class="iconcat" src="assets/polo-shirt.png" /></p>
                             أزيـاء
                         </button>
                         </Col></Link>
-                        <Link to='/Products_page'>
+                        <Link to='/mak/furnitures'>
                         <Col xs={6} md={4}>
                         <button class="bc" >
                             <p><img class="iconcat" src="assets/bed.png" /></p>
