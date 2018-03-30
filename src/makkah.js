@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Features from './components/Features';
+import Features from './components/makkah/Features';
 import Hero from './components/makkah/Hero';
 import HotProducts from './components/makkah/HotProducts';
 import Categories from './components/makkah/Categories';

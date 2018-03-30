@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Features from './components/Features';
+import Features from './components/riyadh/Features';
 import Hero from './components/riyadh/Hero';
 import HotProducts from './components/riyadh/HotProducts';
 import Categories from './components/riyadh/Categories';
