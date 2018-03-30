@@ -12,6 +12,7 @@
     border:solid grey 2px;
     border-radius: 25px;
     padding: 10px;
+    position: fixed;
 }
 .gridele{
     margin: 0%;
@@ -51,3 +52,4 @@
     color: #337ab7;
     text-decoration: none;
 }
+
