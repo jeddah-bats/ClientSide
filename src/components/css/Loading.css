@@ -6,6 +6,11 @@
     background-color: #2188b6;
 }
 
+.load-3{
+    margin-right: 20%;
+    margin-top: 7%;
+}
+
 .load-3 .line:nth-last-child(1) {
     animation: loadingC .6s .1s linear infinite;
 }
