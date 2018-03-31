@@ -6,23 +6,23 @@ class searchFormNavbar extends Component {
     render() {
         return (
 
-            <div class="searchFormcontainer">
+            <div class="searchFormnav_container">
 
-                <div class="formgroupcontainer">
-                    <FormGroup className="formgroup">
-                        <FormControl className="fcontrol" type="text" placeholder="ابحث عن" />
+                <div class="formgro_container">
+                    <FormGroup className="formgro">
+                        <FormControl className="controlnav" type="text" placeholder="ابحث عن" />
                     </FormGroup>{' '}
                 </div>
-                <div class="dropDowncontainer" >
-                    <select class="dropdownlist">
+                <div class="dropDownnav_container" >
+                    <select class="dropdown_listnav">
                         <option value="">كل المدن</option>
                         <option value="جدة">جدة</option>
                         <option value="مكة">مكة</option>
                         <option value="الرياض">الرياض</option>
                     </select>
                 </div>
-                <div class="btncontainer">
-                    <Button className="searchbutton" type="submit" >ابحث</Button>
+                <div class="btnnav_container">
+                    <Button className="search_buttonnav" type="submit" >ابحث</Button>
                 </div>
 
             </div>
