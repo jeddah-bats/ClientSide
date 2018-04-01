@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import NotFound from './components/NotFound';
+import searcresults_page from './searcresults_page';
 import makkah from './makkah';
 import riyadh from './riyadh';
 import Main from './Main';
@@ -45,6 +46,7 @@ class App extends Component {
                   <Route path='/Loading' component={Loading} />
                   <Route path='/makkah' component={makkah} />
                   <Route path='/riyadh' component={riyadh} />
+                  <Route path='/searchresults' component={searcresults_page} />
                   <Route path='/jed/cars' component={jed_cars_page} />
                   <Route path='/jed/electronics' component={jed_electronics_page} />
                   <Route path='/jed/furnitures' component={jed_furnitures_page} />
