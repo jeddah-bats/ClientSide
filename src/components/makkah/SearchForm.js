@@ -7,25 +7,27 @@ class searchForm extends Component {
         return (
 
             <div class="searchForm_container">
-
+            <form action="https://jeddah-bats.herokuapp.com/Products" method="post" id="form1">
                 <div class="formgroup_container">
                     <FormGroup className="formgroup">
-                    <FormControl className="fcontrol" type="text" placeholder="ابحث عن" />
+                        <FormControl name="searchfield" className="fcontrol" type="text" placeholder="ابحث عن" />
                     </FormGroup>{' '}
                 </div>
+
                 <div class="dropDown_container" >
-                    <select class="dropdown_list">
-                        <option value="">كل المدن</option>
-                        <option value="جدة">جدة</option>
-                        <option value="مكة">مكة</option>
-                        <option value="الرياض">الرياض</option>
+                    <select name="city" id="mySelect" class="dropdown_list" onChange={this.handleDDL}>
+                        <option value="all" name="all">كل المدن</option>
+                        <option value="جدة" name="جدة">جدة</option>
+                        <option value="مكة" name="مكة" selected>مكة</option>
+                        <option value="الرياض" name="الرياض">الرياض</option>
                     </select>
                 </div>
-                <div class="btn_container">
-                    <Button className="search_button" type="submit" >ابحث</Button>
-                </div>
-
+            </form>
+            <div class="btn_container">
+                <Button type="submit" form="form1" value="Submit" className="search_button" onClick={this.handleClick}>ابحث</Button>
             </div>
+
+        </div>
         );
     }
 
