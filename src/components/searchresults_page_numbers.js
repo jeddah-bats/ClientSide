@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Pagination, Grid, Row, Col, ListGroup, ListGroupItem, Image } from 'react-bootstrap';
-import '../css/Products_page.css';
+import './css/Products_page.css';
 
-class product_page_numbers extends Component {
+class searchresults_page_numbers extends Component {
     render() {
         return (
      
@@ -27,4 +27,4 @@ class product_page_numbers extends Component {
 
 }
 
-export default product_page_numbers;
+export default searchresults_page_numbers;
