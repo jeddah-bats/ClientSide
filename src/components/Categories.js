@@ -9,23 +9,23 @@ class Categories extends Component {
         return (
             <div id="maindivc">
                 <Grid>
-                <h2 id="cate">الـتـصـنـيـفـات</h2>
+                <h2 id="cate">الـتـصـنـيـفـات فـي {this.props.data.cityname}</h2>
                     <Row>
-                    <Link to='/jed/video-games'>
+                    <Link to={'/العاب فيديو/'+this.props.data.cityname}>
                     <Col xs={6} md={4}>
                         <button class="bc">
                             <p><img class="iconcat" src="assets/game.png" /></p>
                             الـعـاب الـفـيـديـو
                         </button>
                     </Col></Link>
-                    <Link to='/jed/electronics'>
+                    <Link to={'/اجهزة/'+this.props.data.cityname}>
                     <Col xs={6} md={4}>
                         <button class="bc">
                             <p><img class="iconcat" src="assets/television.png" /></p>
                             اجـهـزة
                         </button>
                         </Col></Link>
-                        <Link to='/jed/cars'>
+                        <Link to={'/حراج/'+this.props.data.cityname}>
                         <Col xs={6} md={4}>
                         <button class="bc">
                             <p><img class="iconcat" src="assets/car.png" /></p>
@@ -35,14 +35,14 @@ class Categories extends Component {
                         <Col xs={6} md={4}>
 
                         </Col>
-                        <Link to='/jed/fashion'>
+                        <Link to={'/أزياء/'+this.props.data.cityname}>
                         <Col xs={6} md={4}>
                         <button class="bc" >
                             <p><img class="iconcat" src="assets/polo-shirt.png" /></p>
                             أزيـاء
                         </button>
                         </Col></Link>
-                        <Link to='/jed/furnitures'>
+                        <Link to={'/اثاث/'+this.props.data.cityname}>
                         <Col xs={6} md={4}>
                         <button class="bc" >
                             <p><img class="iconcat" src="assets/bed.png" /></p>

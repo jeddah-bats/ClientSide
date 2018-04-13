@@ -7,7 +7,7 @@ class HotProducts extends Component {
         return (
             <div id="maindivh">
                 <Grid>
-                <h2 id="hotproducts">الـمُـنـتـجـات الـأكـثـر رواجـاً</h2>
+                <h2 id="hotproducts">الـمُـنـتـجـات الـأكـثـر رواجـاً فـي {this.props.data.cityname}</h2>
                     <Row>
                         <Col xs={6} md={4}>
                         <Thumbnail alt="p1" src="assets/block.png" >

@@ -12,17 +12,16 @@ var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
 
 class Proudct extends Component {
+  
   render() {
     return (
       <div>
         <div> <Hero/> </div>
-        <div> <SearchCity/> </div>
-        <div> <Features/> </div>
-        <div> <HotProducts/> </div>
-        <div> <Categories/> </div>
+        <div> <SearchCity data={this.props.data}/> </div>
+        <div> <Features data={this.props.data}/> </div>
+        <div> <HotProducts data={this.props.data}/> </div>
+        <div> <Categories data={this.props.data}/> </div>
         <div> <Footer/> </div>
-        
-
       </div>
       
     );

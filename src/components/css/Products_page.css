@@ -8,11 +8,13 @@
     border-top: solid 2px gray;
     border-left: none;
 }
-.img{
-    border:solid grey 2px;
-    border-radius: 25px;
-    padding: 10px;
+#bordermab{
+    border:solid grey 3px;
+    border-radius: 5px;
     position: fixed;
+    width: 26%;
+    height: 60%;
+
 }
 .gridele{
     margin: 0%;

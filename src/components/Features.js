@@ -8,7 +8,7 @@ class Features extends Component {
         return (
             <div id="maindivf">
                 <Grid>
-                <h2 id="features">جِـد مـا تُـريـد مـن خـلال</h2>
+                <h2 id="features">جِـد مـا تُـريـد فـي {this.props.data.cityname} مـن خـلال</h2>
                     <Row>
                         <Col xs={6} md={4}>
                         <Thumbnail alt="التاريخ" src="assets/calendar.png" >
