@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Navbar,Nav} from 'react-bootstrap';
 import './css/products_page_navbar.css';
 
-class Categories_page_navbar extends Component {
+class AllProducts_page_navbar extends Component {
     render() {
         return (
             <div id="undernav">
-            <p id='navbarname'>{this.props.data.cate} فـي {this.props.data.city}</p>
+            <p id='navbarname'>جـمـيـع الـمـنـتـجـات فـي {this.props.data.city}</p>
                &nbsp;
             </div>
         );
@@ -14,4 +14,4 @@ class Categories_page_navbar extends Component {
 
 }
 
-export default Categories_page_navbar;
+export default AllProducts_page_navbar;

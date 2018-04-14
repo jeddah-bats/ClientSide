@@ -4,9 +4,8 @@ import './css/Products_page.css';
 import Loading from './Loading';
 import NotFound from './NotFound';
 import ShowMore from "@tedconf/react-show-more";
-import Googlemap from './googlemap';
 
-class Categories_page_grid extends Component {
+class AllProducts_page_grid extends Component {
 
     constructor(props) {
         super(props);
@@ -18,9 +17,8 @@ class Categories_page_grid extends Component {
       }
     
       componentDidMount() {
-        var cate = this.props.data.cate;
         var city = this.props.data.city;
-        fetch("https://jeddah-bats.herokuapp.com/Products?city="+city+"&cat="+cate)
+        fetch("https://jeddah-bats.herokuapp.com/Products?city="+city)
           .then(res => res.json())
           .then(
             (result) => {
@@ -51,9 +49,7 @@ class Categories_page_grid extends Component {
             <Grid className="gridele">
             <Row className="show-grid">
                 <Col xs={4} md={2} className="colmap">
-                  <div id="bordermab">
-                    <Googlemap data={this.props.data} />
-                  </div>
+
                 </Col>
                 <Col xs={16} md={10} className="col">
                 <ShowMore items={Products} by={20}>
@@ -101,4 +97,4 @@ class Categories_page_grid extends Component {
 
 }
 
-export default Categories_page_grid;
+export default AllProducts_page_grid;

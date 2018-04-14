@@ -15,7 +15,7 @@ class Features extends Component {
                                     <h2 class="fcss" >الـتـاريـخ</h2>
                                     <p>لعرض منتجات في تاريخ معين</p>
                             <p>
-                            <Link to='/jed/date'>
+                            <Link to={'/التاريخ/'+this.props.data.cityname}>
                             <Button bsStyle="primary">أعرض المزيد</Button>
                             </Link>
                             </p>
@@ -24,9 +24,9 @@ class Features extends Component {
                         <Col xs={6} md={4}>
                         <Thumbnail  alt="المدينة" src="assets/buildings.png" >
                                     <h2 class="fcss">الـمـديـنـة</h2>
-                                    <p>لعرض المنتجات التي تباع في مدينتك</p>
+                                    <p>لعرض احصائيات مدينتك</p>
                             <p>
-                            <Link to='/jed/products'>
+                            <Link to={'/احصائيات/'+this.props.data.cityname}>
                             <Button bsStyle="primary">أعرض المزيد</Button>
                             </Link>
                             </p>
@@ -35,9 +35,9 @@ class Features extends Component {
                         <Col xs={6} md={4}>
                         <Thumbnail alt="المنتج" src="assets/bar-code-scanner.png" >
                                     <h2 class="fcss" >الـمـنـتـج</h2>
-                                    <p>قم بالبحث عن منتج محدد</p>
+                                    <p>قم بعرض جميع المنتجات في مدينتك</p>
                             <p>
-                            <Link to='/jed/products'>
+                            <Link to={'/جميع المنتجات/'+this.props.data.cityname}>
                             <Button bsStyle="primary">أعرض المزيد</Button>
                             </Link>
                             </p>                        

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Loading from './Loading';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import './css/googlemap.css';
 
 const style = {
   width: '100%',
@@ -18,7 +19,10 @@ class googlemap extends Component {
         this.state = {
           error: null,
           isLoaded: false,
-          Places: []
+          Places: [],
+          showingInfoWindow: false,
+          activeMarker: {},
+          selectedPlace: {}
         };
       }
     
@@ -61,6 +65,26 @@ class googlemap extends Component {
           return "46.675296"
       }
 
+      state = {
+
+  };
+
+  onMarkerClick = (props, marker, e) =>
+    this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showingInfoWindow: true
+    });
+
+  onMapClicked = (props) => {
+    if (this.state.showingInfoWindow) {
+      this.setState({
+        showingInfoWindow: false,
+        activeMarker: null
+      })
+    }
+  };
+
     render() {
         const { error, isLoaded, Places } = this.state;
         if (error) {
@@ -79,12 +103,20 @@ class googlemap extends Component {
                 zoom={11}
                 onClick={this.onMapClicked}>
                 {Places.map(Place => (
-                    <Marker
-                    title={Place.name}
-                    name={Place.name}
-                    position={{lat: Place.lat, lng: Place.lng}} /> 
-                    //<a href={Place.link} target="_blank"></a>
+                      <Marker
+                      title={Place.name}
+                      name={Place.name}
+                      url={Place.url}
+                      position={{lat: Place.lat, lng: Place.lng}}
+                      onClick={this.onMarkerClick} /> 
                 ))}
+                <InfoWindow
+                      marker={this.state.activeMarker}
+                      visible={this.state.showingInfoWindow}>
+                        <div>
+                          <h6><a href={this.state.selectedPlace.url} id="textinfo" target="_blank">{this.state.selectedPlace.name}</a></h6>
+                        </div>
+                    </InfoWindow>
               </Map>         
             </div>        
         );

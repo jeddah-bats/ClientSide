@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Main from './Main';
 import Categories from './Categories';
+import Statistics from './Statistics';
+import DatePro from './Date';
+import AllProducts from './AllProducts';
 import NotFound from './components/NotFound';
 import searcresults_page from './searcresults_page';
 
@@ -21,11 +24,11 @@ class App extends Component {
                   <Route exact path='/' render={() => <Main data={info.var[0]} />}/>
                   <Route path='/مكة' render={() => <Main data={info.var[1]} />}/>                  
                   <Route path='/الرياض' render={() => <Main data={info.var[2]} />}/>
-
-                  <Route path='/:cate/:city' component={Categories} />
-
                   <Route path='/searchresults' component={searcresults_page} />
-      
+                  <Route path='/جميع المنتجات/:city' component={AllProducts} />
+                  <Route path='/احصائيات/:city' component={Statistics} />
+                  <Route path='/التاريخ/:city' component={DatePro} />
+                  <Route path='/:cate/:city' component={Categories} />
                   <Route render={function() {
                     return <NotFound/> }} />
                 </Switch>
