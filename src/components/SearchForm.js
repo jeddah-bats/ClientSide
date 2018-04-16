@@ -1,20 +1,49 @@
 import React, { Component } from 'react';
-import { Jumbotron, Button, FormGroup, FormControl, Navbar } from 'react-bootstrap';
+import {Form, Jumbotron, Button, FormGroup, FormControl, Navbar } from 'react-bootstrap';
 import './css/searchForm.css';
+var Link = require('react-router-dom').Link
+
 
 class searchForm extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            searchfield: '', 
+            city:''
+        };
+
+        this.handleChangesearchfield = this.handleChangesearchfield.bind(this);
+        this.handleChangecity = this.handleChangecity.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChangesearchfield(event) {
+        this.setState({ searchfield: event.target.value });
+    }
+
+    handleChangecity(event) {
+        this.setState({ city: event.target.value });
+    }
+
+    handleSubmit(event) {
+        this.props.history.push('/النتائج/'+this.state.city+'/'+this.state.searchfield)
+        event.preventDefault();
+    }
+
+
     render() {
         return (
-<div class="searchForm_container">
-                <form action="https://jeddah-bats.herokuapp.com/Products" method="post" id="form1">
+            <div class="searchForm_container">
+                <form onSubmit={this.handleSubmit} id="form1">
                     <div class="formgroup_container">
                         <FormGroup className="formgroup">
-                            <FormControl name="searchfield" className="fcontrol" type="text" placeholder="ابحث عن" />
+                            <FormControl type="text" value={this.state.searchfield} onChange={this.handleChangesearchfield} name="searchfield" className="fcontrol" type="text" placeholder="ابحث عن" />
                         </FormGroup>{' '}
                     </div>
 
                     <div class="dropDown_container" >
-                        <select name="city" id="mySelect" class="dropdown_list" onChange={this.handleDDL}>
+                        <select value={this.state.city} onChange={this.handleChangecity} name="city" id="mySelect" class="dropdown_list" >
                             <option value="all" name="all">كل المدن</option>
                             <option value="جدة" name="جدة">جدة</option>
                             <option value="مكة" name="مكة">مكة</option>
@@ -25,7 +54,6 @@ class searchForm extends Component {
                 <div class="btn_container">
                     <Button type="submit" form="form1" value="Submit" className="search_button" onClick={this.handleClick}>ابحث</Button>
                 </div>
-
             </div>
         );
     }

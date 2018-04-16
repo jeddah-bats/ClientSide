@@ -6,7 +6,7 @@ class AllProducts_page_navbar extends Component {
     render() {
         return (
             <div id="undernav">
-            <p id='navbarname'>جـمـيـع الـمـنـتـجـات فـي {this.props.data.city}</p>
+            <p id='navbarname'>نـتـائـج الـبـحـث عـن " {this.props.data.searchfailed} " فـي {this.props.data.city}</p>
                &nbsp;
             </div>
         );

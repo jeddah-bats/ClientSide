@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar'; 
-import searchresults_page_navbar from './components/searchresults_page_navbar'; 
-import searchresults_page_grid from './components/searchresults_page_grid';
+import AllProducts_page_navbar from './components/AllProducts_page_navbar'; 
+import AllProducts_page_grid from './components/AllProducts_page_grid';
 
-class searcresults_page extends Component {
+class AllProducts extends Component {
     render() {
         return (
             <div>
                 <Navbar/>
-                <searchresults_page_navbar/>
+                <AllProducts_page_navbar data={this.props.match.params}/>
                 <div id="griddiv">
-                    <searchresults_page_grid/>
+                    <AllProducts_page_grid data={this.props.match.params}/>
                 </div>
             </div>
         );
     }
-
 }
 
-export default searcresults_page;
+export default AllProducts;
