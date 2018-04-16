@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {Form, Jumbotron, Button, FormGroup, FormControl, Navbar } from 'react-bootstrap';
 import './css/searchForm.css';
+import { withRouter } from "react-router-dom";
 var Link = require('react-router-dom').Link
-
 
 class searchForm extends Component {
 
@@ -52,7 +52,7 @@ class searchForm extends Component {
                     </div>
                 </form>
                 <div class="btn_container">
-                    <Button type="submit" form="form1" value="Submit" className="search_button" onClick={this.handleClick}>ابحث</Button>
+                    <Button type="submit" form="form1" value="Submit" className="search_button" >ابحث</Button>
                 </div>
             </div>
         );
@@ -60,4 +60,4 @@ class searchForm extends Component {
 
 }
 
-export default searchForm;
+export default withRouter(searchForm);
