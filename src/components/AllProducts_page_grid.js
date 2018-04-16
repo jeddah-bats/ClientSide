@@ -18,8 +18,7 @@ class AllProducts_page_grid extends Component {
     
       componentDidMount() {
         var city = this.props.data.city;
-        var searchfailed = this.props.data.searchfailed;
-        fetch("https://jeddah-bats.herokuapp.com/results"+"/"+city+"/"+searchfailed)
+        fetch("https://jeddah-bats.herokuapp.com/Products?city="+city)
           .then(res => res.json())
           .then(
             (result) => {

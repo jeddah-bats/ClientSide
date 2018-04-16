@@ -5,7 +5,7 @@ import Loading from './Loading';
 import NotFound from './NotFound';
 import ShowMore from "@tedconf/react-show-more";
 
-class AllProducts_page_grid extends Component {
+class searcresults_page_grid extends Component {
 
     constructor(props) {
         super(props);
@@ -18,7 +18,8 @@ class AllProducts_page_grid extends Component {
     
       componentDidMount() {
         var city = this.props.data.city;
-        fetch("https://jeddah-bats.herokuapp.com/Products?city="+city)
+        var searchfailed = this.props.data.searchfailed;
+        fetch("https://jeddah-bats.herokuapp.com/results"+"/"+city+"/"+searchfailed)
           .then(res => res.json())
           .then(
             (result) => {
@@ -97,4 +98,4 @@ class AllProducts_page_grid extends Component {
 
 }
 
-export default AllProducts_page_grid;
+export default searcresults_page_grid;
