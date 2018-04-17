@@ -26,7 +26,10 @@ class Features extends Component {
                                     <h2 className="fcss">الـمـديـنـة</h2>
                                     <p>لعرض احصائيات مدينتك</p>
                             <p>
-                            <Link to={'/احصائيات/'+this.props.data.cityname}>
+                            <Link to={{
+                                    pathname: '/احصائيات/'+this.props.data.cityname,
+                                    search: '?cate='+"حراج",
+                                    }}>
                             <Button bsStyle="primary">أعرض المزيد</Button>
                             </Link>
                             </p>

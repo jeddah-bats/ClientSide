@@ -10,7 +10,7 @@ class searchForm extends Component {
         super(props);
         this.state = {
             searchfield: '', 
-            city:''
+            city:'كل المدن'
         };
 
         this.handleChangesearchfield = this.handleChangesearchfield.bind(this);
@@ -44,7 +44,7 @@ class searchForm extends Component {
 
                     <div className="dropDown_container" >
                         <select value={this.state.city} onChange={this.handleChangecity} name="city" id="mySelect" className="dropdown_list" >
-                            <option value="كل المدن" name="كل المدن" defaultValue >كل المدن</option>
+                            <option value="كل المدن" name="كل المدن" >كل المدن</option>
                             <option value="جدة" name="جدة">جدة</option>
                             <option value="مكة" name="مكة">مكة</option>
                             <option value="الرياض" name="الرياض">الرياض</option>

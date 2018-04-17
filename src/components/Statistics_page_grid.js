@@ -5,22 +5,20 @@ import Loading from './Loading';
 import NotFound from './NotFound';
 import Chart from './chart'
 import Comparing from './comparing'
+import { withRouter } from "react-router-dom";
 
 class Statistics_page_grid extends Component {
 
   constructor() {
     super();
     this.state = {
-      cate: 'حراج'
+      cate: '',
     };
   }
   
   updateCate(event) {
-    this.setState({cate: event.target.value});
-  }
-
-  getCate(event) {
-    return this.state.value
+    this.setState({ cate: event.target.value });
+    this.props.history.push('/احصائيات/'+this.props.data.city+'?cate='+event.target.value)
   }
 
     render() {
@@ -35,11 +33,11 @@ class Statistics_page_grid extends Component {
                     <option value="اثاث">اثاث</option>
                     <option value="أزياء">أزياء</option>
                   </select>
-                     < Comparing data={this.state.cate} />
+                  < Comparing data={this.props.history.location.search.split("=")[1]} />
             </div>
         );
     } 
 }
 
-export default Statistics_page_grid;
+export default withRouter(Statistics_page_grid);
 

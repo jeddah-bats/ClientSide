@@ -111,6 +111,7 @@ class googlemap extends Component {
                       onClick={this.onMarkerClick} 
                       key={Place._id} /> 
                 ))}
+                {console.log()}
                 <InfoWindow
                       marker={this.state.activeMarker}
                       visible={this.state.showingInfoWindow}>
