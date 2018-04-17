@@ -108,7 +108,8 @@ class googlemap extends Component {
                       name={Place.name}
                       url={Place.url}
                       position={{lat: Place.lat, lng: Place.lng}}
-                      onClick={this.onMarkerClick} /> 
+                      onClick={this.onMarkerClick} 
+                      key={Place._id} /> 
                 ))}
                 <InfoWindow
                       marker={this.state.activeMarker}

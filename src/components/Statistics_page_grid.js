@@ -26,8 +26,8 @@ class Statistics_page_grid extends Component {
     render() {
           return (
             <div>
-              < Chart data={this.props.data} />
-              <h2 className="comparing"> مـقـارنـة مـديـنـة {this.props.data.city} مـع الـمـدن الـأخـرى فـي تـصـنـيـف</h2>
+              <div className="chart">< Chart data={this.props.data} /> </ div>
+              <span className="comparing"> مـقـارنـة مـديـنـة {this.props.data.city} مـع الـمـدن الـأخـرى فـي تـصـنـيـف</span>
                   <select value={this.state.cate} onChange={this.updateCate.bind(this)}>
                     <option value="حراج">حراج</option>
                     <option value="اجهزة">اجهزة</option>

@@ -6,10 +6,10 @@ class Loading extends Component {
     render() {
         return (
             <div>
-                    <div class="load-3">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
+                    <div className="load-3">
+                        <div className="line"></div>
+                        <div className="line"></div>
+                        <div className="line"></div>
                     </div>
             </div>
 

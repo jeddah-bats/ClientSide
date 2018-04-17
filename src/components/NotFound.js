@@ -9,7 +9,7 @@ class NotFound extends Component {
                 <div id='error-text'>
                     <span>404</span>
                     <p>PAGE NOT FOUND</p>
-                    <p class='hmpg'><a href='/' class="back">Back To Home</a></p>
+                    <p className='hmpg'><a href='/' className="back">Back To Home</a></p>
                 </div>
             </div>
         );

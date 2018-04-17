@@ -58,19 +58,19 @@ class AllProducts_page_grid extends Component {
                   <ListGroup className="lgcontainer">
                   {current.map(item => 
                   
-                  <ListGroupItem className="lg" >
-                    <div class="adx">
+                  <ListGroupItem className="lg" key={item._id} >
+                    <div className="adx">
 
-                      <div class="adxTitle"><a id="LinkProduct" target="_blank" href={item.link}> {item.name} </a></div>
+                      <div className="adxTitle"><a id="LinkProduct" target="_blank" href={item.link}> {item.name} </a></div>
 
-                      <div calss="adxExtraInfo">
-                        <span class="adxExtraInfoPart">السعر:  {item.price} ريال </span>
-                        <span class="adxExtraInfoPart">التاريخ:  {item.date} </span>
+                      <div className="adxExtraInfo">
+                        <span className="adxExtraInfoPart">السعر:  {item.price} ريال </span>
+                        <span className="adxExtraInfoPart">التاريخ:  {item.date} </span>
                       </div>
 
-                      <div calss="adxExtraInfo">
-                      <span class="adxExtraInfoPart">التصنيف:  {item.cat} </span>
-                        <span class="adxExtraInfoPart">المدينة:  {item.city} </span>
+                      <div className="adxExtraInfo">
+                      <span className="adxExtraInfoPart">التصنيف:  {item.cat} </span>
+                        <span className="adxExtraInfoPart">المدينة:  {item.city} </span>
                       </div>
 
                     </div>
