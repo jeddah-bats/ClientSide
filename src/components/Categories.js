@@ -13,22 +13,22 @@ class Categories extends Component {
                     <Row>
                     <Link to={'/العاب فيديو/'+this.props.data.cityname}>
                     <Col xs={6} md={4}>
-                        <button class="bc">
-                            <p><img class="iconcat" src="assets/game.png" /></p>
+                        <button className="bc">
+                            <p><img className="iconcat" src="assets/game.png" /></p>
                             الـعـاب الـفـيـديـو
                         </button>
                     </Col></Link>
                     <Link to={'/اجهزة/'+this.props.data.cityname}>
                     <Col xs={6} md={4}>
-                        <button class="bc">
-                            <p><img class="iconcat" src="assets/television.png" /></p>
+                        <button className="bc">
+                            <p><img className="iconcat" src="assets/television.png" /></p>
                             اجـهـزة
                         </button>
                         </Col></Link>
                         <Link to={'/حراج/'+this.props.data.cityname}>
                         <Col xs={6} md={4}>
-                        <button class="bc">
-                            <p><img class="iconcat" src="assets/car.png" /></p>
+                        <button className="bc">
+                            <p><img className="iconcat" src="assets/car.png" /></p>
                             حـراج
                         </button>
                         </Col></Link>
@@ -37,15 +37,15 @@ class Categories extends Component {
                         </Col>
                         <Link to={'/أزياء/'+this.props.data.cityname}>
                         <Col xs={6} md={4}>
-                        <button class="bc" >
-                            <p><img class="iconcat" src="assets/polo-shirt.png" /></p>
+                        <button className="bc" >
+                            <p><img className="iconcat" src="assets/polo-shirt.png" /></p>
                             أزيـاء
                         </button>
                         </Col></Link>
                         <Link to={'/اثاث/'+this.props.data.cityname}>
                         <Col xs={6} md={4}>
-                        <button class="bc" >
-                            <p><img class="iconcat" src="assets/bed.png" /></p>
+                        <button className="bc" >
+                            <p><img className="iconcat" src="assets/bed.png" /></p>
                             اثـاث
                         </button>
                         </Col></Link>            

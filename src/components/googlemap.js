@@ -22,7 +22,7 @@ class googlemap extends Component {
           Places: [],
           showingInfoWindow: false,
           activeMarker: {},
-          selectedPlace: {}
+          selectedPlace: {},
         };
       }
     
@@ -73,7 +73,7 @@ class googlemap extends Component {
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
-      showingInfoWindow: true
+      showingInfoWindow: true,
     });
 
   onMapClicked = (props) => {
@@ -114,7 +114,8 @@ class googlemap extends Component {
                       marker={this.state.activeMarker}
                       visible={this.state.showingInfoWindow}>
                         <div>
-                          <h6><a href={this.state.selectedPlace.url} id="textinfo" target="_blank">{this.state.selectedPlace.name}</a></h6>
+                          <h6><a href={"https://www.google.com/maps/dir/?api=1&destination="+this.state.selectedPlace.lat+
+                          ","+this.state.selectedPlace.lng} id="textinfo" target="_blank">{this.state.selectedPlace.name}</a></h6>
                         </div>
                     </InfoWindow>
               </Map>         

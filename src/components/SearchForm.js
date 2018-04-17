@@ -34,24 +34,24 @@ class searchForm extends Component {
 
     render() {
         return (
-            <div class="searchForm_container">
+            <div className="searchForm_container">
                 <form onSubmit={this.handleSubmit} id="form1">
-                    <div class="formgroup_container">
+                    <div className="formgroup_container">
                         <FormGroup className="formgroup">
                             <FormControl type="text" value={this.state.searchfield} onChange={this.handleChangesearchfield} name="searchfield" className="fcontrol" type="text" placeholder="ابحث عن" />
                         </FormGroup>{' '}
                     </div>
 
-                    <div class="dropDown_container" >
-                        <select value={this.state.city} onChange={this.handleChangecity} name="city" id="mySelect" class="dropdown_list" >
-                            <option value="all" name="all">كل المدن</option>
+                    <div className="dropDown_container" >
+                        <select value={this.state.city} onChange={this.handleChangecity} name="city" id="mySelect" className="dropdown_list" >
+                            <option value="كل المدن" name="كل المدن" defaultValue >كل المدن</option>
                             <option value="جدة" name="جدة">جدة</option>
                             <option value="مكة" name="مكة">مكة</option>
                             <option value="الرياض" name="الرياض">الرياض</option>
                         </select>
                     </div>
                 </form>
-                <div class="btn_container">
+                <div className="btn_container">
                     <Button type="submit" form="form1" value="Submit" className="search_button" >ابحث</Button>
                 </div>
             </div>

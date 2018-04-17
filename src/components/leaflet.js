@@ -3,12 +3,11 @@ import {
   Circle,
   CircleMarker,
   Map,
-  Polygon,
   Polyline,
   Popup,
   Rectangle,
-  TileLayer,
-} from '../../src';
+  TileLayer
+} from 'react-leaflet';
 
 class leaflet extends Component {
   

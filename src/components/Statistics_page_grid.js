@@ -3,82 +3,43 @@ import { Pagination, Grid, Row, Col, ListGroup, ListGroupItem, Image, Button } f
 import './css/Products_page.css';
 import Loading from './Loading';
 import NotFound from './NotFound';
-import ShowMore from "@tedconf/react-show-more";
-import {Bar} from 'react-chartjs-2';
+import Chart from './chart'
+import Comparing from './comparing'
 
 class Statistics_page_grid extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-          error: null,
-          isLoaded: false,
-          statistics: []
-        };
-      }
-    
-      componentDidMount() {
-        var city = this.props.data.city;
-        fetch("https://jeddah-bats.herokuapp.com/statistics/"+city)
-          .then(res => res.json())
-          .then(
-            (result) => {
-              this.setState({
-                isLoaded: true,
-                statistics: result
-              });
-            },
-            (error) => {
-              this.setState({
-                isLoaded: true,
-                error
-              });
-            }
-          )
-      }
+  constructor() {
+    super();
+    this.state = {
+      cate: 'حراج'
+    };
+  }
+  
+  updateCate(event) {
+    this.setState({cate: event.target.value});
+  }
+
+  getCate(event) {
+    return this.state.value
+  }
 
     render() {
-
-        const { error, isLoaded, statistics } = this.state;
-        if (error) {
-          return <div>Error: {error.message}</div>;
-        } else if (!isLoaded) {
-          return <Loading/>; 
-        } else if (statistics.length==0) {
-          return <NotFound/>; 
-        }else {
           return (
             <div>
-              <Bar
-                data={
-                  {
-                    labels: [statistics[0]._id,statistics[1]._id,statistics[2]._id,statistics[3]._id,statistics[4]._id],
-                    datasets:[{
-                      label:"عدد المنتجات",
-                      data:[
-                        statistics[0].total,statistics[1].total,statistics[2].total,statistics[3].total,statistics[4].total
-                      ],
-                      backgroundColor:[
-                        'rgba(255, 99, 132, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(75, 192, 192, 0.6)',
-                        'rgba(153, 102, 255, 0.6)',
-                        'rgba(255, 159, 64, 0.6)'              ]
-                    }]
-                  }
-                }
-                width={80}
-                height={250}
-                options={{
-                maintainAspectRatio: false
-                }}
-              />
+              < Chart data={this.props.data} />
+              <h2 className="comparing"> مـقـارنـة مـديـنـة {this.props.data.city} مـع الـمـدن الـأخـرى فـي تـصـنـيـف</h2>
+                  <select value={this.state.cate} onChange={this.updateCate.bind(this)}>
+                    <option value="حراج">حراج</option>
+                    <option value="اجهزة">اجهزة</option>
+                    <option value="العاب فيديو">العاب فيديو</option>
+                    <option value="اثاث">اثاث</option>
+                    <option value="أزياء">أزياء</option>
+                  </select>
+                     < Comparing data={this.state.cate} />
             </div>
         );
-      }
-    }
-
+    } 
 }
 
 export default Statistics_page_grid;
+
