@@ -18,7 +18,8 @@ class cars_page_grid extends Component {
     
       componentDidMount() {
         var city = this.props.data.city;
-        fetch("https://jeddah-bats.herokuapp.com/Products?city="+city)
+        var month= this.props.date;
+        fetch("https://jeddah-bats.herokuapp.com/date/"+city+"/"+month)
           .then(res => res.json())
           .then(
             (result) => {
@@ -49,7 +50,6 @@ class cars_page_grid extends Component {
             <Grid className="gridele">
             <Row className="show-grid">
                 <Col xs={4} md={2} className="colmap">
-
                 </Col>
                 <Col xs={16} md={10} className="col">
                 <ShowMore items={Products} by={20}>

@@ -106,7 +106,7 @@ class googlemap extends Component {
                       <Marker
                       title={Place.name}
                       name={Place.name}
-                      url={Place.url}
+                      url={Place.urlplace}
                       position={{lat: Place.lat, lng: Place.lng}}
                       onClick={this.onMarkerClick} 
                       key={Place._id} /> 
@@ -116,8 +116,7 @@ class googlemap extends Component {
                       marker={this.state.activeMarker}
                       visible={this.state.showingInfoWindow}>
                         <div>
-                          <h6><a href={"https://www.google.com/maps/dir/?api=1&destination="+this.state.selectedPlace.lat+
-                          ","+this.state.selectedPlace.lng} id="textinfo" target="_blank">{this.state.selectedPlace.name}</a></h6>
+                          <h6><a href={this.state.selectedPlace.url} id="textinfo" target="_blank">{this.state.selectedPlace.name}</a></h6>
                         </div>
                     </InfoWindow>
               </Map>         

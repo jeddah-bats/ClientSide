@@ -9,16 +9,16 @@ import { withRouter } from "react-router-dom";
 
 class Statistics_page_grid extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      cate: '',
+      cate: 'حراج',
     };
+    this.updateCate = this.updateCate.bind(this);
   }
   
   updateCate(event) {
     this.setState({ cate: event.target.value });
-    this.props.history.push('/احصائيات/'+this.props.data.city+'?cate='+event.target.value)
   }
 
     render() {
@@ -26,18 +26,18 @@ class Statistics_page_grid extends Component {
             <div>
               <div className="chart">< Chart data={this.props.data} /> </ div>
               <span className="comparing"> مـقـارنـة مـديـنـة {this.props.data.city} مـع الـمـدن الـأخـرى فـي تـصـنـيـف</span>
-                  <select value={this.state.cate} onChange={this.updateCate.bind(this)}>
+                  <select value={this.state.cate} onChange={this.updateCate}>
                     <option value="حراج">حراج</option>
                     <option value="اجهزة">اجهزة</option>
                     <option value="العاب فيديو">العاب فيديو</option>
                     <option value="اثاث">اثاث</option>
                     <option value="أزياء">أزياء</option>
                   </select>
-                  < Comparing data={this.props.history.location.search.split("=")[1]} />
+                  <h1> {this.state.cate} </h1>
+                  <Comparing data={this.state.cate} />
             </div>
         );
     } 
 }
 
 export default withRouter(Statistics_page_grid);
-
