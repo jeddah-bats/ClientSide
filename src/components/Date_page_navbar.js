@@ -7,7 +7,7 @@ class Date_page_navbar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          value: '02'
+          value: '01'
         };
         this.handleChangedate = this.handleChangedate.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,11 +22,9 @@ class Date_page_navbar extends Component {
     }
 
     render() {
-
         return (
             <div id="undernav">
             <span id='navbarname'>جـمـيـع الـمـنـتـجـات فـي {this.props.data.city} فـي شـهـر </span>
-            <form onSubmit={this.handleSubmit} id="formdate">
               <select value={this.state.value} onChange={this.handleChangedate} id="mySelect"  >
                               <option value="01" name="1" >1</option>
                               <option value="02" name="2">2</option>
@@ -41,8 +39,7 @@ class Date_page_navbar extends Component {
                               <option value="11" name="11">1</option>
                               <option value="12" name="12">12</option>
               </select>
-            </form>
-              <Button type="submit" value="Submit" form="formdate" onclick={this.handleSubmit}>فلتر</Button>
+              <Button type="submit" form="formdate" value="Submit" onClick={this.handleSubmit} >فلتر</Button>
             </div>
         );
     }

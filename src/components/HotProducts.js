@@ -3,6 +3,7 @@ import Loading from './Loading';
 import NotFound from './NotFound';
 import { Grid,Row,Col,Button,Thumbnail } from 'react-bootstrap';
 import './css/HotProducts.css';
+var Link = require('react-router-dom').Link
 
 class HotProducts extends Component {
 
@@ -61,15 +62,18 @@ class HotProducts extends Component {
           )
       }
 
-        GetMax(v1,v2, v3){
+      GetMax(v1,v2, v3){
         var max =v1.total;
+        var nameofmax = v1._id;
         if (max<v2.total){
-            max=v2.total;
+            max=v2;
+            nameofmax = v2._id;
         }
         else if(max<v3.total){
-            max=v3.total;
+            max=v3;
+            nameofmax = v3._id;
         }
-        return max._id;
+        return nameofmax;
       }
 
     render() {
@@ -87,30 +91,40 @@ class HotProducts extends Component {
                 <h2 id="hotproducts">الـمُـنـتـجـات الـأكـثـر رواجـاً فـي {this.props.data.cityname}</h2>
                     <Row>
                         <Col xs={6} md={4}>
-                        <Thumbnail alt="p1" src="assets/block.png" >
-                                    <h2 className='products'>{sony2[0].total} {xbox[0].total} {play[0].total}</h2>
+                        <Thumbnail alt="p1" src="assets/game.png" >
+                              <h1>فـي تـصـنـيـف الـعـاب الـفـيـديـو</h1>
+                              <Link to={'/النتائج/'+this.props.data.cityname+"/"+this.GetMax(sony2[0], xbox[0], play[0])}>
+                              <h2 className='products'>{this.GetMax(sony2[0], xbox[0], play[0])}</h2></Link>
                         </Thumbnail>
                         </Col>
                         <Col xs={6} md={4}>
-                        <Thumbnail alt="p2" src="assets/block.png" >
-                                    <h2 className='products'>{lexus[0].total} {toyota[0].total} {hyundai[0].total}</h2>
+                        <Thumbnail alt="p3" src="assets/television.png" >
+                              <h1>فـي تـصـنـيـف الأجـهـزة</h1>
+                              <Link to={'/النتائج/'+this.props.data.cityname+"/"+this.GetMax(iphone[0], samsung[0], sony[0])}>
+                              <h2 className='products'>{this.GetMax(iphone[0], samsung[0], sony[0])}</h2></Link>
                         </Thumbnail>
                         </Col>
                         <Col xs={6} md={4}>
-                        <Thumbnail alt="p3" src="assets/block.png" >
-                                    <h2 className='products'>{iphone[0].total} {samsung[0].total} {samsung[0].total}</h2>
+                        <Thumbnail alt="p2" src="assets/car.png" >
+                        <h1>فـي تـصـنـيـف حـراج</h1>
+                        <Link to={'/النتائج/'+this.props.data.cityname+"/"+this.GetMax(lexus[0], toyota[0], hyundai[0])}>
+                                    <h2 className='products'>{this.GetMax(lexus[0], toyota[0], hyundai[0])}</h2></Link>
                         </Thumbnail>
                         </Col>
                         <Col xs={6} md={4}>
-                        <Thumbnail alt="p6" src="assets/block.png" >
-                                    <h2 className='products'>{room[0].total} {kit[0].total} {livingroom[0].total}</h2>
+                        <Thumbnail alt="p5" src="assets/polo-shirt.png" >
+                        <h1>فـي تـصـنـيـف الأزيـاء</h1>
+                        <Link to={'/النتائج/'+this.props.data.cityname+"/"+this.GetMax(dress[0], watch[0], perform[0])}>
+                                    <h2 className='products'>{this.GetMax(dress[0], watch[0], perform[0])}</h2></Link>
                         </Thumbnail>
-                        </Col>
+                        </Col>   
                         <Col xs={6} md={4}>
-                        <Thumbnail alt="p5" src="assets/block.png" >
-                                    <h2 className='products'>{dress[0].total} {watch[0].total} {perform[0].total}</h2>
+                        <Thumbnail alt="p6" src="assets/bed.png" >
+                        <h1>فـي تـصـنـيـف الأثـاث</h1>
+                        <Link to={'/النتائج/'+this.props.data.cityname+"/"+this.GetMax(room[0], kit[0], livingroom[0])}>
+                                    <h2 className='products'>{this.GetMax(room[0], kit[0], livingroom[0])}</h2></Link>
                         </Thumbnail>
-                        </Col>                
+                        </Col>             
                     </Row>
                 </Grid>
             </div>

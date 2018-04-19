@@ -7,19 +7,19 @@ class Date extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentmonth: "02"
+            currentmonth: "01"
         };    
     }
 
     myCallback = (newmonth) => {
         this.setState({ currentmonth: newmonth });
     }
+
     render() {
         return (
             <div>
                 <Navbar/>
                 <Date_page_navbar data={this.props.match.params} callbackFromParent={this.myCallback} />
-                <h1> {this.state.currentmonth} </h1>
                 <div id="griddiv">
                     <Date_page_grid data={this.props.match.params} date={this.state.currentmonth}/>
                 </div>

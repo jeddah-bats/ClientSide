@@ -5,39 +5,37 @@ import Loading from './Loading';
 import NotFound from './NotFound';
 import Chart from './chart'
 import Comparing from './comparing'
-import { withRouter } from "react-router-dom";
 
 class Statistics_page_grid extends Component {
 
   constructor(props) {
     super(props);
+    this.updateCate = this.updateCate.bind(this);
     this.state = {
       cate: 'حراج',
     };
-    this.updateCate = this.updateCate.bind(this);
   }
-  
+
   updateCate(event) {
     this.setState({ cate: event.target.value });
   }
 
-    render() {
-          return (
-            <div>
-              <div className="chart">< Chart data={this.props.data} /> </ div>
-              <span className="comparing"> مـقـارنـة مـديـنـة {this.props.data.city} مـع الـمـدن الـأخـرى فـي تـصـنـيـف</span>
-                  <select value={this.state.cate} onChange={this.updateCate}>
-                    <option value="حراج">حراج</option>
-                    <option value="اجهزة">اجهزة</option>
-                    <option value="العاب فيديو">العاب فيديو</option>
-                    <option value="اثاث">اثاث</option>
-                    <option value="أزياء">أزياء</option>
-                  </select>
-                  <h1> {this.state.cate} </h1>
-                  <Comparing data={this.state.cate} />
-            </div>
-        );
-    } 
+  render() {
+    return (
+      <div>
+        <div className="chart"><Chart data={this.props.data} /> </ div>
+        <span className="comparing"> مـقـارنـة مـديـنـة {this.props.data.city} مـع الـمـدن الـأخـرى فـي تـصـنـيـف</span>
+        <select value={this.state.cate} onChange={this.updateCate}>
+          <option value="حراج">حراج</option>
+          <option value="اجهزة">اجهزة</option>
+          <option value="العاب فيديو">العاب فيديو</option>
+          <option value="اثاث">اثاث</option>
+          <option value="أزياء">أزياء</option>
+        </select>
+        <Comparing data={this.state.cate} />
+      </div>
+    );
+  }
 }
 
-export default withRouter(Statistics_page_grid);
+export default Statistics_page_grid;

@@ -5,7 +5,7 @@ import Loading from './Loading';
 import NotFound from './NotFound';
 import ShowMore from "@tedconf/react-show-more";
 
-class cars_page_grid extends Component {
+class Date_page_grid extends Component {
 
     constructor(props) {
         super(props);
@@ -15,10 +15,18 @@ class cars_page_grid extends Component {
           Products: []
         };
       }
-    
+
       componentDidMount() {
+        this.Dofetch();
+      }
+    
+      componentDidUpdate() {
+        this.Dofetch();
+      }
+
+      Dofetch(){
         var city = this.props.data.city;
-        var month= this.props.date;
+        var month= (this.props.date === '') ? '01' : this.props.date;
         fetch("https://jeddah-bats.herokuapp.com/date/"+city+"/"+month)
           .then(res => res.json())
           .then(
@@ -44,7 +52,7 @@ class cars_page_grid extends Component {
         } else if (!isLoaded) {
           return <Loading/>; 
         } else if (Products.length==0) {
-          return <NotFound/>; 
+          return <h1> عذراً لا توجد منتجات في هذا الشهر</h1>; 
         }else {
           return (
             <Grid className="gridele">
@@ -97,4 +105,4 @@ class cars_page_grid extends Component {
 
 }
 
-export default cars_page_grid;
+export default Date_page_grid;
