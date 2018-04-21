@@ -3,14 +3,14 @@ import chaiEnzyme from 'chai-enzyme'
 import Enzyme, { shallow,mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { spy, sinon } from 'sinon';
-import Comparing from './comparing'
+import Chart from './chart'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-describe('<Comparing/>', function () {
-    const spy = jest.spyOn(Comparing.prototype, 'Dofetch');
-    const wrapper = mount(<Comparing data={{ data:'حراج' }} datacity={{ city:'جدة' }} />)
-    it('Comparing fetch', function () {
+describe('<Chart/>', function () {
+    const spy = jest.spyOn(Chart.prototype, 'componentDidMount');
+    const wrapper = mount(<Chart data={{ city:'الرياض' }} />)
+    it('Chart fetch', function () {
         expect(spy).toHaveBeenCalled();
     });
   })
