@@ -1,21 +1,17 @@
 import React from 'react'
-import chai, { expect } from 'chai'
 import chaiEnzyme from 'chai-enzyme'
-import Enzyme, { shallow } from 'enzyme'
+import Enzyme, { shallow,mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
-import Comparing from './components/comparing'
+import { spy, sinon } from 'sinon';
+import Comparing from './comparing'
 
-chai.use(chaiEnzyme())
 Enzyme.configure({ adapter: new Adapter() })
 
-
 describe('<Comparing/>', function () {
-
-    let wrapper
-    beforeEach(function () {
-        wrapper = shallow(<Comparing data={{ data:'حراج' }} />)
-    })
-    it('Comparing', function () {
-        expect(wrapper.find('cat')).to.be.not.null;
+    const spy = jest.spyOn(Comparing.prototype, 'componentDidMount');
+    const wrapper = mount(<Comparing data={{ data:'حراج' }} datacity={{ city:'جدة' }} />)
+    it('Comparing fetch', function () {
+        wrapper.instance().componentDidMount();
+        expect(spy).toHaveBeenCalled();
     });
   })
