@@ -5,7 +5,7 @@ class Footer extends Component {
     render() {
         return (
             <div>
-                <p id="f">جميع الحقوق محفوظة © 2018</p>
+                <p className="copyright" id="f">جميع الحقوق محفوظة © {new Date().getFullYear()}</p>
                 <p id="f">Hosted by: Heroku</p>
             </div>
         );
