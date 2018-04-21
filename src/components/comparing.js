@@ -34,25 +34,28 @@ class comparing extends Component {
             isLoaded: true,
             statistics: result
           });
-        },
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
         }
       )
+      .catch((error) => {
+        this.setState({
+          isLoaded: true,
+          error
+        });
+      });
   }
 
   render() {
+    <h1>  {this.props.datacity.city}  </h1>
     const { error, isLoaded, statistics } = this.state;
     if (error) {
-      return <div>Error: {error.message}</div>;
+      return "";
     } else if (!isLoaded) {
       return <Loading />;
     } else if (statistics.length == 0) {
-      return <NotFound />;
+      return "";
     } else {
+      if(this.props.datacity.city!="جدة" && this.props.datacity.city!="مكة" && this.props.datacity.city!="الرياض")
+      return "";
       return (
         <div>
           <Doughnut

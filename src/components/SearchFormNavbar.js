@@ -57,7 +57,6 @@ class searchFormNavbar extends Component {
             </div>
         );
     }
-
 }
 
 export default withRouter(searchFormNavbar);

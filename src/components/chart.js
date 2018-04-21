@@ -26,25 +26,27 @@ class chart extends Component {
                 isLoaded: true,
                 statistics: result
               });
-            },
-            (error) => {
-              this.setState({
-                isLoaded: true,
-                error
-              });
             }
           )
+          .catch((error) => {
+            this.setState({
+              isLoaded: true,
+              error
+            });
+          });
       }
 
     render() {
 
         const { error, isLoaded, statistics } = this.state;
         if (error) {
-          return <div>Error: {error.message}</div>;
+          return <NotFound />;
         } else if (!isLoaded) {
           return <Loading/>; 
         } else if (statistics.length==0) {
-          return <NotFound/>; 
+          if(this.props.data.city!="جدة" && this.props.data.city!="مكة" && this.props.data.city!="الرياض")
+          return <NotFound/>;
+          return <h1>عذراً لا توجد احصائيات في مدينة {this.props.data.city}</h1>;  
         }else {
           return (
             <div>

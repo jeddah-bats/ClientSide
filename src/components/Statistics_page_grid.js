@@ -32,7 +32,7 @@ class Statistics_page_grid extends Component {
           <option value="اثاث">اثاث</option>
           <option value="أزياء">أزياء</option>
         </select>
-        <Comparing data={this.state.cate} />
+        <Comparing data={this.state.cate} datacity={this.props.data} />
       </div>
     );
   }

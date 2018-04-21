@@ -26,24 +26,27 @@ class AllProducts_page_grid extends Component {
                 isLoaded: true,
                 Products: result
               });
-            },
-            (error) => {
-              this.setState({
-                isLoaded: true,
-                error
-              });
             }
           )
+          .catch((error) => {
+            this.setState({
+              isLoaded: true,
+              error
+            });
+          });
       }
 
     render() {
         const { error, isLoaded, Products } = this.state;
         if (error) {
-          return <div>Error: {error.message}</div>;
+          return <NotFound/>;
         } else if (!isLoaded) {
           return <Loading/>; 
         } else if (Products.length==0) {
-          return <NotFound/>; 
+          if(this.props.data.city!="جدة" && this.props.data.city!="مكة" && this.props.data.city!="الرياض"){
+            return <NotFound/>
+          }
+          return <h1>عذراً لا توجد منتجات فـي {this.props.data.city}</h1>; 
         }else {
           return (
             <Grid className="gridele">
