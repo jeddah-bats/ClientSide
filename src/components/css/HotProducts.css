@@ -11,6 +11,14 @@
 
 .products{
     text-align: center;
-    color: gray;
+    color: #2e75b6;
     padding-bottom: 13px;
+}
+.catename{
+    text-align: center;
+    font-size: 30px;
+}
+
+.thumbnail img {
+    height: 190px;
 }

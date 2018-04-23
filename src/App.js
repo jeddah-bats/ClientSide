@@ -30,7 +30,6 @@ class App extends Component {
                   <Route path='/التاريخ/:city' component={DatePro} />
                   <Route path='/:cate/:city' component={Categories} />
                   <Route path='/NotFound' component={NotFound} />
-
                   <Route render={function() {
                     return <NotFound/> }} />
                 </Switch>
